@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="p-1">
+            <h1>CV List</h1>
+        </div>
+        <div class="p-1">
+            <a class="btn btn-primary" [routerLink]="'/create'">New CV</a>
+        </div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <th>Name</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of list">
+                    <td>{{ item.name }}</td>
+                    <td>
+                        <a class="btn btn-primary" [routerLink]="['/edit', item.id]">Edit</a>
+                        <a class="btn btn-danger" (click)="deleteCV(item.id)">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

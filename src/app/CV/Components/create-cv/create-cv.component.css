@@ -1,0 +1,11 @@
+.form-group {
+    margin-bottom: 15px;
+  }
+  
+  input.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+  
+  button:disabled {
+    background-color: #cccccc;
+  }
